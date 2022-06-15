@@ -41,9 +41,6 @@ if (isset($_POST['submit'])) {
 
     if ($email == "jaidholariya@gmail.com" && $pwd == "2031963") {
         include 'index1.php';
-        include 'config.php';
-        echo "<script>console.log('$email')</script>";
-        echo "<script>console.log($pwd)</script>";
         echo "<!--";
     } else {
         echo '<div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
