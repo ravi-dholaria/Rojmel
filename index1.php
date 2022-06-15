@@ -14,16 +14,10 @@
 </head>
 
 <body>
-    <?php
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "rojmel";
-
-    $cont_to_db = mysqli_connect($servername, $username, $password, $database);
-    ?>
     <?php
+    include 'config.php';
+
     if (isset($_POST['newCust'])) {
         if (isset($_POST['New_customer'])) {
             $name  = $_POST['New_customer'];
