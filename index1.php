@@ -11,6 +11,7 @@
 
 
     <title>Accounts</title>
+    <link rel="icon" href="title.png" type="image/x-icon">
 </head>
 
 <body>

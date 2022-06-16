@@ -32,15 +32,18 @@
             }
         }
     </script>
-    <title>Hello, world!</title>
+    <title>Rojmel</title>
+    <link rel="icon" href="title.png" type="image/x-icon">
 </head>
 <?php
+$flag = 0;
 if (isset($_POST['submit'])) {
     $email = $_POST['typeEmailX'];
     $pwd = $_POST['typePasswordX'];
 
     if ($email == "jaidholariya@gmail.com" && $pwd == "2031963") {
-        include 'index1.php';
+        header("Location:index1.php");
+        $flag = 1;
         echo "<!--";
     } else {
         echo '<div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -88,7 +91,12 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </section>
-    <?php echo "--!>"; ?>
+    <?php
+    if ($flag == 1) {
+        echo "--!>";
+        $flag = 0;
+    }
+    ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
