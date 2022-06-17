@@ -340,7 +340,7 @@
                                     <button class="btn edit1" onclick="datapass(<?php echo $list['id']; ?>,'<?php echo $list['Name']; ?>',<?php echo $net ?>,'<?php echo $list['Date']; ?>')" id="edit1" value="<?php echo $list['id']; ?>" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                         <span class="material-symbols-outlined">edit</span>
                                     </button>
-                                    <a class="btn" href="index2.php?delete=true&id=<?php echo $list['id']; ?>" name="delete">
+                                    <a class="btn" href="index1.php?delete=true&id=<?php echo $list['id']; ?>" name="delete">
                                         <span class="material-symbols-outlined">
                                             delete
                                         </span>
