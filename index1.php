@@ -319,11 +319,12 @@
                                 $sql = "SELECT * FROM `rojmel` ORDER BY id DESC;";
                                 $result =   mysqli_query($cont_to_db, $sql);
                                 $count = 1;
+                                $total = 0;
                                 while ($list = mysqli_fetch_assoc($result)) {
 
                                     $formattedDate = date("d/m/Y",  strtotime($list['Date']));
                                     $net = $list['credit'] - $list['debit'];
-
+                                    $total += $net;
                                 ?>
                                     <!-- End php block -->
                             <tr class="<?php if ($net >= 0) {
@@ -346,6 +347,15 @@
                                         </span>
                                 </td>
                             <?php } ?>
+                            <div class="p-1 fs-4 mb-2 <?php if ($total >= 0) {
+                                                            echo 'bg-success';
+                                                        } else {
+                                                            echo 'bg-danger';
+                                                        } ?>">
+                                <strong>Total : </strong>
+                                <strong> <?php echo $total; ?> </strong>
+
+                            </div>
                             </tr>
                         </tbody>
                     </table>
