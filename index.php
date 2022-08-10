@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['typeEmailX'];
     $pwd = $_POST['typePasswordX'];
 
-    if ($email == "jaidholariya@gmail.com" && $pwd == "2031963") {
+    if ($email == "student@gmail.com" && $pwd == "student") {
         header("Location:index1.php");
         $flag = 1;
         echo "<!--";
